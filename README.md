@@ -1,5 +1,8 @@
 # 6-"A" Sinf Uchun Tabiiy Fan Darsidan Interaktiv O'yin va Slaydlar Majmuasi
 
+🌐 **24/7 Jonli Havola (Onlayn O'ynash):**
+👉 **https://ismoilkfkfkfjfjf-ui.github.io/6a-tabiiy-fan-oyin/**
+
 ## 📌 Mavzu: Oziq zanjiri va oziq to'ri
 Ushbu loyiha 6-sinf Tabiiy fan darsini zamonaviy, qiziqarli, xatosiz va interaktiv tarzda o'tish uchun maxsus ishlab chiqilgan.
 

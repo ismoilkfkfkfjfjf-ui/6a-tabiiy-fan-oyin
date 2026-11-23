@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6-A Sinf | Oziq zanjiri va oziq to'ri - 20 ta Zamonaviy Interaktiv O'yinlar</title>
+  <title>6-A Sinf | Oziq zanjiri va oziq to'ri - 20 ta Xilma-xil Interaktiv O'yinlar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
       --accent: #f59e0b;
       --team-a: #2563eb;
       --team-b: #ea580c;
-      --dark: #090d16;
-      --dark-card: #141e33;
+      --dark: #070b14;
+      --dark-card: #121b2d;
       --text: #f8fafc;
       --text-muted: #94a3b8;
       --gold: #fbbf24;
@@ -34,14 +34,13 @@
 
     body {
       font-family: 'Nunito', sans-serif;
-      background: radial-gradient(circle at 10% 10%, #064e3b 0%, #090d16 50%, #041f18 100%);
+      background: radial-gradient(circle at 10% 10%, #064e3b 0%, #070b14 55%, #031c15 100%);
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Ambient animated background particles */
     .bg-leaf {
       position: fixed;
       pointer-events: none;
@@ -55,7 +54,6 @@
       100% { transform: translateY(-10vh) rotate(360deg); }
     }
 
-    /* Main Container */
     .app-container {
       position: relative;
       z-index: 1;
@@ -65,12 +63,12 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      gap: 18px;
+      gap: 16px;
     }
 
-    /* Header styling */
+    /* Top Header */
     header {
-      background: rgba(20, 30, 51, 0.85);
+      background: rgba(18, 27, 45, 0.85);
       backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 22px;
@@ -123,7 +121,7 @@
     .timer-widget {
       display: flex;
       align-items: center;
-      background: rgba(9, 13, 22, 0.85);
+      background: rgba(7, 11, 20, 0.85);
       border: 2px solid #334155;
       border-radius: 16px;
       padding: 6px 14px;
@@ -179,7 +177,6 @@
       transform: scale(1.05);
     }
 
-    /* Top Action Buttons */
     .header-actions {
       display: flex;
       align-items: center;
@@ -198,7 +195,6 @@
       align-items: center;
       gap: 8px;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      text-decoration: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
@@ -212,22 +208,15 @@
       box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
     }
 
-    .btn-slides:disabled, .btn-slides.locked {
+    .btn-slides.locked {
       background: #475569;
       color: #94a3b8;
       cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
     }
 
     .btn-bio {
       background: linear-gradient(135deg, #6366f1, #4338ca);
       color: white;
-    }
-
-    .btn-bio:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
     }
 
     .btn-sound {
@@ -251,7 +240,7 @@
     }
 
     .team-card {
-      background: rgba(20, 30, 51, 0.85);
+      background: rgba(18, 27, 45, 0.85);
       border-radius: 20px;
       padding: 16px 20px;
       display: flex;
@@ -261,16 +250,10 @@
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
       position: relative;
-      overflow: hidden;
     }
 
-    .team-card.team-1 {
-      border-color: rgba(37, 99, 235, 0.4);
-    }
-
-    .team-card.team-2 {
-      border-color: rgba(234, 88, 12, 0.4);
-    }
+    .team-card.team-1 { border-color: rgba(37, 99, 235, 0.4); }
+    .team-card.team-2 { border-color: rgba(234, 88, 12, 0.4); }
 
     .team-card.active-turn {
       transform: scale(1.02);
@@ -285,7 +268,6 @@
       right: 14px;
       font-size: 0.65rem;
       font-weight: 900;
-      letter-spacing: 1px;
       color: #fbbf24;
       background: rgba(251, 191, 36, 0.15);
       padding: 2px 8px;
@@ -307,16 +289,10 @@
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .team-1 .team-avatar {
-      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    }
-
-    .team-2 .team-avatar {
-      background: linear-gradient(135deg, #f97316, #c2410c);
-    }
+    .team-1 .team-avatar { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .team-2 .team-avatar { background: linear-gradient(135deg, #f97316, #c2410c); }
 
     .team-meta h3 {
       font-family: 'Fredoka', cursive;
@@ -405,9 +381,7 @@
       border-color: #10b981;
     }
 
-    /* =======================================================================
-       20 TA ZAMONAVIY O'YIN KARTALARI GRID LAYOUT (CARDS PORTAL)
-       ======================================================================= */
+    /* 20 Game Cards Grid */
     .game-cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -415,7 +389,7 @@
     }
 
     .game-card-item {
-      background: rgba(20, 30, 51, 0.8);
+      background: rgba(18, 27, 45, 0.8);
       backdrop-filter: blur(12px);
       border: 2px solid rgba(255, 255, 255, 0.08);
       border-radius: 24px;
@@ -426,9 +400,8 @@
       gap: 14px;
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
       cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     .game-card-item:hover {
@@ -437,14 +410,13 @@
       border-color: rgba(255, 255, 255, 0.25);
     }
 
-    /* Glow highlights according to point tier */
     .game-card-item.tier-100 { border-top: 4px solid #38bdf8; }
     .game-card-item.tier-200 { border-top: 4px solid #34d399; }
     .game-card-item.tier-300 { border-top: 4px solid #fbbf24; }
     .game-card-item.tier-500 { border-top: 4px solid #f97316; }
     .game-card-item.tier-800 {
       border-top: 4px solid #f43f5e;
-      background: linear-gradient(180deg, rgba(244, 63, 94, 0.08) 0%, rgba(20, 30, 51, 0.8) 100%);
+      background: linear-gradient(180deg, rgba(244, 63, 94, 0.08) 0%, rgba(18, 27, 45, 0.8) 100%);
     }
 
     .game-card-header {
@@ -457,13 +429,12 @@
       width: 52px;
       height: 52px;
       border-radius: 16px;
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(7, 11, 20, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       transition: transform 0.2s;
     }
 
@@ -500,7 +471,6 @@
       padding: 2px 8px;
       border-radius: 6px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .game-card-body h3 {
@@ -533,9 +503,6 @@
       font-size: 0.75rem;
       font-weight: 800;
       color: #64748b;
-      display: flex;
-      align-items: center;
-      gap: 5px;
     }
 
     .btn-play-card {
@@ -559,28 +526,15 @@
       box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
     }
 
-    /* Completed state */
     .game-card-item.completed {
       opacity: 0.75;
-      background: rgba(15, 23, 42, 0.5);
+      background: rgba(7, 11, 20, 0.5);
     }
 
-    .game-card-item.completed.won-by-team1 {
-      border-color: rgba(37, 99, 235, 0.6);
-    }
+    .game-card-item.completed.won-by-team1 { border-color: rgba(37, 99, 235, 0.6); }
+    .game-card-item.completed.won-by-team2 { border-color: rgba(234, 88, 12, 0.6); }
 
-    .game-card-item.completed.won-by-team2 {
-      border-color: rgba(234, 88, 12, 0.6);
-    }
-
-    .game-card-item.completed .btn-play-card {
-      background: #334155;
-      color: #94a3b8;
-    }
-
-    /* =======================================================================
-       MODAL WINDOWS & SLIDES
-       ======================================================================= */
+    /* Modals */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -602,7 +556,7 @@
     }
 
     .modal-window {
-      background: #141e33;
+      background: #121b2d;
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 28px;
       max-width: 900px;
@@ -614,7 +568,6 @@
       transform: scale(0.92);
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       overflow: hidden;
-      position: relative;
     }
 
     .modal-overlay.active .modal-window {
@@ -627,7 +580,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(9, 13, 22, 0.6);
+      background: rgba(7, 11, 20, 0.6);
     }
 
     .modal-header h2 {
@@ -665,14 +618,8 @@
     }
 
     /* Slides Presentation Styles */
-    .slides-wrapper {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
     .slide-timer-banner {
-      background: rgba(9, 13, 22, 0.8);
+      background: rgba(7, 11, 20, 0.8);
       border-radius: 12px;
       padding: 8px 16px;
       margin-bottom: 16px;
@@ -682,19 +629,7 @@
       border: 1px solid rgba(56, 189, 248, 0.2);
     }
 
-    .slide-timer-badge {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      color: #38bdf8;
-      font-size: 0.9rem;
-    }
-
-    .slide-progress-dots {
-      display: flex;
-      gap: 6px;
-    }
+    .slide-progress-dots { display: flex; gap: 6px; }
 
     .progress-dot {
       width: 10px;
@@ -711,14 +646,8 @@
       box-shadow: 0 0 8px rgba(52, 211, 153, 0.7);
     }
 
-    .slide-card {
-      display: none;
-      animation: fadeInSlide 0.3s ease;
-    }
-
-    .slide-card.active {
-      display: block;
-    }
+    .slide-card { display: none; animation: fadeInSlide 0.3s ease; }
+    .slide-card.active { display: block; }
 
     @keyframes fadeInSlide {
       from { opacity: 0; transform: translateX(20px); }
@@ -734,9 +663,7 @@
     }
 
     @media (max-width: 768px) {
-      .slide-content {
-        grid-template-columns: 1fr;
-      }
+      .slide-content { grid-template-columns: 1fr; }
     }
 
     .slide-text h3 {
@@ -744,7 +671,6 @@
       font-size: 1.6rem;
       color: #fbbf24;
       margin-bottom: 12px;
-      line-height: 1.3;
     }
 
     .slide-tag {
@@ -752,7 +678,6 @@
       font-weight: 800;
       color: #34d399;
       text-transform: uppercase;
-      letter-spacing: 1px;
       margin-bottom: 6px;
       display: block;
     }
@@ -777,14 +702,14 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      background: rgba(9, 13, 22, 0.4);
+      background: rgba(7, 11, 20, 0.4);
       padding: 8px 12px;
       border-radius: 10px;
       border-left: 3px solid #10b981;
     }
 
     .slide-visual-box {
-      background: radial-gradient(circle at center, #1e293b 0%, #090d16 100%);
+      background: radial-gradient(circle at center, #1e293b 0%, #070b14 100%);
       border: 2px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
       padding: 16px;
@@ -794,13 +719,9 @@
       justify-content: center;
       min-height: 320px;
       position: relative;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .slide-svg-art {
-      width: 100%;
-      max-height: 280px;
-    }
+    .slide-svg-art { width: 100%; max-height: 280px; }
 
     .slide-nav-bar {
       display: flex;
@@ -821,7 +742,7 @@
       border-radius: 12px;
       cursor: pointer;
       display: flex;
-      align-items: gap;
+      align-items: center;
       gap: 8px;
       transition: all 0.2s;
     }
@@ -831,10 +752,7 @@
       transform: translateY(-2px);
     }
 
-    .btn-slide-nav:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
+    .btn-slide-nav:disabled { opacity: 0.4; cursor: not-allowed; }
 
     /* Lock Screen for Slides */
     .lock-screen-box {
@@ -870,106 +788,7 @@
       line-height: 1.6;
     }
 
-    /* =======================================================================
-       CARD 1: OMADLI BARABAN (WHEEL OF FORTUNE MODAL)
-       ======================================================================= */
-    .wheel-modal-stage {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 10px;
-    }
-
-    .wheel-canvas-wrapper {
-      position: relative;
-      width: 380px;
-      height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 480px) {
-      .wheel-canvas-wrapper {
-        width: 300px;
-        height: 300px;
-      }
-    }
-
-    #wheelCanvas {
-      width: 100%;
-      height: 100%;
-      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
-      border-radius: 50%;
-    }
-
-    .wheel-pointer {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 36px;
-      height: 48px;
-      z-index: 10;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
-    }
-
-    .wheel-center-cap {
-      position: absolute;
-      width: 66px;
-      height: 66px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #fbbf24 30%, #b45309 100%);
-      border: 4px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: #090d16;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-      cursor: pointer;
-      z-index: 5;
-      transition: transform 0.2s;
-    }
-
-    .wheel-center-cap:hover {
-      transform: scale(1.08);
-    }
-
-    .btn-spin-wheel-card {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #090d16;
-      font-family: 'Fredoka', cursive;
-      font-size: 1.35rem;
-      font-weight: 700;
-      padding: 14px 44px;
-      border-radius: 18px;
-      border: 3px solid #fef08a;
-      cursor: pointer;
-      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn-spin-wheel-card:hover:not(:disabled) {
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.7);
-    }
-
-    .btn-spin-wheel-card:disabled {
-      background: #475569;
-      border-color: #64748b;
-      color: #94a3b8;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
-
-    /* Common Interactive Question Styles inside Modals */
+    /* Common Interactive Elements inside Game Modal */
     .game-content-box {
       display: flex;
       flex-direction: column;
@@ -984,13 +803,11 @@
     }
 
     @media (max-width: 640px) {
-      .options-grid {
-        grid-template-columns: 1fr;
-      }
+      .options-grid { grid-template-columns: 1fr; }
     }
 
     .option-btn {
-      background: rgba(9, 13, 22, 0.7);
+      background: rgba(7, 11, 20, 0.7);
       border: 2px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       padding: 16px;
@@ -1038,83 +855,6 @@
       color: #f87171 !important;
     }
 
-    /* Drag / Click Chain Slots */
-    .chain-slots-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin: 15px 0;
-      background: rgba(9, 13, 22, 0.6);
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px dashed rgba(255, 255, 255, 0.15);
-    }
-
-    .chain-slot {
-      width: 105px;
-      height: 90px;
-      border-radius: 14px;
-      border: 2px dashed #475569;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #64748b;
-      position: relative;
-      background: rgba(9, 13, 22, 0.4);
-      transition: all 0.2s;
-    }
-
-    .chain-slot.filled {
-      border-style: solid;
-      border-color: #34d399;
-      background: rgba(16, 185, 129, 0.15);
-      color: #f1f5f9;
-    }
-
-    .chain-arrow {
-      font-size: 1.4rem;
-      color: #fbbf24;
-      font-weight: 900;
-    }
-
-    .chain-tokens-pool {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .chain-token-item {
-      background: #334155;
-      border: 2px solid #475569;
-      border-radius: 12px;
-      padding: 8px 14px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: white;
-      transition: all 0.2s;
-    }
-
-    .chain-token-item:hover {
-      background: #475569;
-      transform: scale(1.05);
-      border-color: #38bdf8;
-    }
-
-    .chain-token-item.used {
-      opacity: 0.3;
-      pointer-events: none;
-    }
-
     /* Feedback & Award Team box */
     .answer-feedback-box {
       margin-top: 14px;
@@ -1124,9 +864,7 @@
       animation: fadeInFeedback 0.3s ease;
     }
 
-    .answer-feedback-box.show {
-      display: block;
-    }
+    .answer-feedback-box.show { display: block; }
 
     @keyframes fadeInFeedback {
       from { opacity: 0; transform: translateY(10px); }
@@ -1173,13 +911,210 @@
     .btn-award.none { background: #475569; color: #cbd5e1; }
     .btn-award:hover { transform: scale(1.04); filter: brightness(1.15); }
 
-    /* Toast notification */
+    /* Crossword Styles */
+    .crossword-grid {
+      display: grid;
+      gap: 6px;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .crossword-cell {
+      width: 44px;
+      height: 44px;
+      background: #1e293b;
+      border: 2px solid #475569;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fredoka', cursive;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f8fafc;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .crossword-cell.revealed {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    .crossword-cell .cell-number {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+
+    /* Word Search Grid */
+    .word-search-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 38px);
+      gap: 6px;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .ws-cell {
+      width: 38px;
+      height: 38px;
+      background: #1e293b;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ws-cell:hover { background: #334155; border-color: #38bdf8; }
+    .ws-cell.selected { background: #3b82f6; color: white; border-color: #60a5fa; }
+    .ws-cell.found { background: #10b981; color: white; border-color: #34d399; }
+
+    /* Memory Match Cards */
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .memory-card {
+      height: 90px;
+      background: #1e293b;
+      border: 2px solid #475569;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .memory-card.flipped {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+    }
+
+    .memory-card.matched {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: #10b981;
+      pointer-events: none;
+    }
+
+    /* Baskets Sorting */
+    .baskets-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .basket-box {
+      background: rgba(7, 11, 20, 0.6);
+      border: 2px dashed #475569;
+      border-radius: 16px;
+      padding: 12px;
+      min-height: 140px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .basket-box:hover {
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Chain Order */
+    .chain-slots-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+      background: rgba(7, 11, 20, 0.6);
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+    }
+
+    .chain-slot {
+      width: 105px;
+      height: 90px;
+      border-radius: 14px;
+      border: 2px dashed #475569;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #64748b;
+      position: relative;
+      background: rgba(7, 11, 20, 0.4);
+      transition: all 0.2s;
+    }
+
+    .chain-slot.filled {
+      border-style: solid;
+      border-color: #34d399;
+      background: rgba(16, 185, 129, 0.15);
+      color: #f1f5f9;
+    }
+
+    .chain-arrow { font-size: 1.4rem; color: #fbbf24; font-weight: 900; }
+
+    .chain-tokens-pool {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .chain-token-item {
+      background: #334155;
+      border: 2px solid #475569;
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      transition: all 0.2s;
+    }
+
+    .chain-token-item:hover {
+      background: #475569;
+      transform: scale(1.05);
+      border-color: #38bdf8;
+    }
+
+    .chain-token-item.used { opacity: 0.3; pointer-events: none; }
+
+    /* Toast */
     .toast-msg {
       position: fixed;
       bottom: 24px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: rgba(9, 13, 22, 0.95);
+      background: rgba(7, 11, 20, 0.95);
       border: 1px solid #38bdf8;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
       color: white;
@@ -1194,9 +1129,7 @@
       gap: 10px;
     }
 
-    .toast-msg.show {
-      transform: translateX(-50%) translateY(0);
-    }
+    .toast-msg.show { transform: translateX(-50%) translateY(0); }
 
     /* Winner Trophy Modal */
     .winner-modal-body {
@@ -1221,7 +1154,6 @@
 </head>
 <body>
 
-  <!-- Animated ambient background -->
   <div class="bg-leaf" style="left: 4%; font-size: 30px;">🍃</div>
   <div class="bg-leaf" style="left: 20%; font-size: 24px; animation-duration: 28s; animation-delay: 2s;">🌱</div>
   <div class="bg-leaf" style="left: 45%; font-size: 34px; animation-duration: 22s; animation-delay: 6s;">🌿</div>
@@ -1236,7 +1168,7 @@
         <span class="badge-6a">🌿 6-"A"</span>
         <div class="header-text">
           <h1>Oziq Zanjiri va Oziq To'ri</h1>
-          <p>Tabiiy fan | 20 ta Zamonaviy Interaktiv O'yinlar Portali</p>
+          <p>Tabiiy fan | 20 ta Xilma-xil Interaktiv O'yinlar (Baraban, Krossvord, Savol-Javob va b.)</p>
         </div>
       </div>
 
@@ -1248,8 +1180,8 @@
           <div class="timer-display" id="timerDisplay">08:00</div>
         </div>
         <div class="timer-controls">
-          <button class="btn-timer-icon" id="btnTimerToggle" title="Taymerni boshlash/to'xtatish">▶</button>
-          <button class="btn-timer-icon" id="btnTimerReset" title="Taymerni qayta o'rnatish">🔄</button>
+          <button class="btn-timer-icon" id="btnTimerToggle" title="Boshlash/To'xtatish">▶</button>
+          <button class="btn-timer-icon" id="btnTimerReset" title="Qayta o'rnatish">🔄</button>
         </div>
       </div>
 
@@ -1307,8 +1239,8 @@
     <!-- Subheader Portal Banner & Filters -->
     <div class="portal-banner">
       <div class="portal-title-block">
-        <h2><span>🎮</span> 20 ta Zamonaviy O'yin Kartalari</h2>
-        <p>Istalgan o'yin kartasini tanlab o'ynang yoki 1-kartadagi Baraban orqali omadni sinang!</p>
+        <h2><span>🎮</span> 20 ta Xilma-xil Interaktiv O'yinlar</h2>
+        <p>1: Baraban testi, 2: Krossvord, 3: Savol-javoblar, 4: So'z qidirish, 5: Zanjir terish va h.k.</p>
       </div>
       <div class="tier-filter-pills">
         <button class="pill-filter active" onclick="filterGames('all', this)">Barchasi (20)</button>
@@ -1353,11 +1285,11 @@
               <div class="slide-text">
                 <span class="slide-tag">1-Bo'lim • Kirish</span>
                 <h3>Oziq Zanjiri Nima?</h3>
-                <p>Barcha tirik mavjudotlar yashashi, harakatlanishi va o'sishi uchun ularga <strong>energiya</strong> kerak. Bu energiya oziqlanish orqali organizmdan organizmga o'tadi.</p>
+                <p>Barcha tirik mavjudotlar yashashi va harakatlanishi uchun ularga <strong>energiya</strong> kerak. Bu energiya oziqlanish orqali organizmdan organizmga o'tadi.</p>
                 <ul class="slide-key-points">
-                  <li><strong>Oziq zanjiri</strong> — bu organizmlarning oziqlanish munosabatlari orqali bir-biriga bog'langan ketma-ketligi.</li>
-                  <li>Har bir oziq zanjirida energiya faqat <strong>bir yo'nalishda</strong> harakatlanadi.</li>
-                  <li>Zanjir har doim <em>energiya ishlab chiqaruvchilardan</em> boshlanadi.</li>
+                  <li><strong>Oziq zanjiri</strong> — organizmlarning oziqlanish munosabatlari orqali bog'langan ketma-ketligi.</li>
+                  <li>Energiya zanjirda faqat <strong>bir yo'nalishda</strong> oqadi.</li>
+                  <li>Zanjir har doim energiya ishlab chiqaruvchilardan boshlanadi.</li>
                 </ul>
               </div>
               <div class="slide-visual-box">
@@ -1393,20 +1325,19 @@
               <div class="slide-text">
                 <span class="slide-tag">2-Bo'lim • Birlamchi Manba</span>
                 <h3>Produtsentlar (Hosil Qiluvchilar)</h3>
-                <p><strong>Produtsentlar</strong> (lotincha <em>produce</em> — yaratish) — noorganik moddalardan organik moddalar sintezlovchi avtotrof organizmlardir.</p>
+                <p><strong>Produtsentlar</strong> — noorganik moddalardan organik moddalar sintezlovchi avtotrof organizmlardir.</p>
                 <ul class="slide-key-points">
                   <li><strong>Fotosintez:</strong> Quyosh nuri, CO₂ va suv yordamida oziq va kislorod hosil qiladi.</li>
-                  <li><strong>Misollar:</strong> Daraxtlar, o'tlar, moxlar va suvdagi mikroskopik <em>fitoplanktonlar</em>.</li>
-                  <li>Quruqlikdagi va suvdagi barcha hayotning asosi aynan produtsentlardir!</li>
+                  <li><strong>Misollar:</strong> Daraxtlar, o'tlar, fitoplanktonlar.</li>
                 </ul>
               </div>
               <div class="slide-visual-box">
                 <svg viewBox="0 0 400 300" class="slide-svg-art">
                   <text x="200" y="60" font-size="44" text-anchor="middle">☀️</text>
                   <path d="M120,240 Q150,150 220,110 Q280,180 260,240 Z" fill="#10b981" stroke="#059669" stroke-width="3"/>
-                  <rect x="30" y="140" width="85" height="30" rx="8" fill="#141e33" stroke="#38bdf8"/>
+                  <rect x="30" y="140" width="85" height="30" rx="8" fill="#121b2d" stroke="#38bdf8"/>
                   <text x="72" y="160" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">CO₂ + H₂O</text>
-                  <rect x="280" y="140" width="95" height="30" rx="8" fill="#141e33" stroke="#4ade80"/>
+                  <rect x="280" y="140" width="95" height="30" rx="8" fill="#121b2d" stroke="#4ade80"/>
                   <text x="327" y="160" fill="#4ade80" font-size="11" font-weight="bold" text-anchor="middle">Oziq + O₂</text>
                 </svg>
               </div>
@@ -1418,10 +1349,9 @@
             <div class="slide-content">
               <div class="slide-text">
                 <span class="slide-tag">3-Bo'lim • O'txo'rlar</span>
-                <h3>Konsumentlar I (1-Tartib Iste'molchilar)</h3>
-                <p><strong>Konsumentlar</strong> — tayyor organik moddalar bilan oziqlanuvchi geterotrof organizmlardir.</p>
+                <h3>Konsumentlar I (1-Tartib)</h3>
+                <p><strong>1-tartib konsumentlar:</strong> To'g'ridan-to'g'ri o'simliklar bilan oziqlanuvchi fitofag (o'txo'r) hayvonlar.</p>
                 <ul class="slide-key-points">
-                  <li><strong>1-tartib:</strong> To'g'ridan-to'g'ri o'simliklar bilan oziqlanadigan <strong>o'txo'r (fitofag)</strong> hayvonlar.</li>
                   <li><strong>Misollar:</strong> Quyon, kiyik, sigir, ot, chigirtka.</li>
                 </ul>
               </div>
@@ -1450,9 +1380,9 @@
                 <h3>Konsumentlar II va III (Yirtqichlar)</h3>
                 <p>O'txo'r hayvonlar bilan oziqlanuvchi yirtqichlar va hammaxo'rlar.</p>
                 <ul class="slide-key-points">
-                  <li><strong>2-tartib konsumentlar:</strong> O'txo'rlarni yeyuvchi yirtqichlar (Tulki, bo'ri, boyqush).</li>
-                  <li><strong>3-tartib (Oliy yirtqichlar):</strong> Burgut, qoplon, arslon, akula.</li>
-                  <li><strong>Hammaxo'rlar (Omnivorlar):</strong> Ham o'simlik, ham hayvon bilan oziqlanuvchilar (Ayiq, inson).</li>
+                  <li><strong>2-tartib:</strong> O'txo'rlarni yeydi (Tulki, bo'ri, boyqush).</li>
+                  <li><strong>3-tartib (Oliy yirtqich):</strong> Burgut, arslon, akula.</li>
+                  <li><strong>Hammaxo'r (Omnivor):</strong> Ayiq, qarg'a, inson.</li>
                 </ul>
               </div>
               <div class="slide-visual-box">
@@ -1478,10 +1408,10 @@
               <div class="slide-text">
                 <span class="slide-tag">5-Bo'lim • Parchalovchilar</span>
                 <h3>Redutsentlar (Tabiat Sanitarilari)</h3>
-                <p><strong>Redutsentlar</strong> — o'lik organik qoldiqlarni parchalab, noorganik moddalarga aylantiruvchi organizmlardir.</p>
+                <p>O'lik organik moddalarni parchalab noorganik moddalarga aylantiradi.</p>
                 <ul class="slide-key-points">
-                  <li><strong>Vakillari:</strong> Zamburug'lar, chirindi bakteriyalari, tuproq chuvalchanglari.</li>
-                  <li>Ular bo'lmasa Yer yuzi chiqindi bilan to'lib, minerallar tugab qolardi.</li>
+                  <li><strong>Vakillari:</strong> Zamburug'lar, bakteriyalar, tuproq chuvalchanglari.</li>
+                  <li>Ular bo'lmasa Yer yuzi chiqindi va jasadlarga to'lib qolardi.</li>
                 </ul>
               </div>
               <div class="slide-visual-box">
@@ -1506,10 +1436,10 @@
               <div class="slide-text">
                 <span class="slide-tag">6-Bo'lim • Qonuniyat</span>
                 <h3>Trofik Darajalar va 10% Qoidasi</h3>
-                <p>Raymond Lindeman qoidasiga ko'ra, har bir keyingi bo'g'inga oldingi energiyaning bor-yo'g'i <strong>10 foizi</strong> o'tadi.</p>
+                <p>Raymond Lindeman qoidasiga ko'ra, har bir keyingi bo'g'inga energiyaning <strong>10 foizi</strong> o'tadi.</p>
                 <ul class="slide-key-points">
-                  <li><strong>90% nima bo'ladi?</strong> Issiqlik, nafas olish va hayotiy jarayonlarda sarflanadi.</li>
-                  <li>Shu sababli oziq zanjirida bo'g'inlar soni 4–5 tadan oshmaydi.</li>
+                  <li>90% energiya issiqlik, nafas va harakatda yo'qoladi.</li>
+                  <li>Shu sababli oziq zanjirlari 4-5 bo'g'indan oshmaydi.</li>
                 </ul>
               </div>
               <div class="slide-visual-box">
@@ -1533,7 +1463,7 @@
               <div class="slide-text">
                 <span class="slide-tag">7-Bo'lim • Turlari</span>
                 <h3>Yaylov va Detrit Zanjirlari</h3>
-                <p>1. <strong>Yaylov zanjiri:</strong> Tirik yashil o'simlikdan boshlanadi (O't → Sigir → Inson).<br>2. <strong>Detrit zanjiri:</strong> O'lik organik qoldiqdan boshlanadi (Barg → Chuvalchang → Qush).</p>
+                <p>1. <strong>Yaylov zanjiri:</strong> Tirik o'simlikdan boshlanadi (O't → Sigir → Inson).<br>2. <strong>Detrit zanjiri:</strong> O'lik xazondan boshlanadi (Barg → Chuvalchang → Qush).</p>
               </div>
               <div class="slide-visual-box">
                 <div style="font-size: 1.1rem; color: #34d399; font-weight: 800; margin-bottom: 8px;">Yaylov: 🌱 → 🦌 → 🐺</div>
@@ -1548,7 +1478,7 @@
               <div class="slide-text">
                 <span class="slide-tag">8-Bo'lim • Oziq To'ri</span>
                 <h3>Oziq To'ri (Trofik To'r)</h3>
-                <p>Barcha zanjirlar tabiatda o'zaro tutashib to'r hosil qiladi. Oziq to'ri qancha boy bo'lsa, tabiat shuncha barqaror bo'ladi!</p>
+                <p>Barcha zanjirlar tabiatda o'zaro tutashib to'r hosil qiladi. Oziq to'ri qancha boy bo'lsa, ekotizim shuncha barqaror bo'ladi!</p>
               </div>
               <div class="slide-visual-box">
                 <text x="200" y="150" font-size="64" text-anchor="middle">🕸️</text>
@@ -1563,7 +1493,7 @@
               <div class="slide-text">
                 <span class="slide-tag">9-Bo'lim • Xavf</span>
                 <h3>Muvozanatning Buzilishi</h3>
-                <p>Biror turning yo'qolishi butun zanjirni izdan chiqaradi. Masalan bo'rilar otilsa, kiyiklar ko'payib o'rmonni quritadi.</p>
+                <p>Biror turning yo'qolishi butun zanjirni izdan chiqaradi (Trofik kaskad). Masalan bo'rilar otilsa, kiyiklar ko'payib o'rmonni quritadi.</p>
               </div>
               <div class="slide-visual-box">
                 <text x="200" y="150" font-size="54" text-anchor="middle">⚖️ ⚠️</text>
@@ -1578,11 +1508,11 @@
               <div class="slide-text">
                 <span class="slide-tag">10-Bo'lim • Musobaqa</span>
                 <h3>O'yinlarga Tayyorgarlik!</h3>
-                <p>Endi 20 ta o'yin kartasidan birini tanlang yoki 1-kartadagi omadli barabanni aylantiring!</p>
+                <p>Endi 20 ta turli xil o'yin kartalari: Baraban testi, Krossvord, Savol-javoblar va boshqalarni o'ynaymiz!</p>
               </div>
               <div class="slide-visual-box">
                 <span style="font-size: 4rem;">🎯</span>
-                <h4 style="font-family: 'Fredoka', cursive; font-size: 1.4rem; color: #fbbf24;">BARCHA 20 TA O'YIN TAYYOR!</h4>
+                <h4 style="font-family: 'Fredoka', cursive; font-size: 1.4rem; color: #fbbf24;">20 TA O'YIN SIZNI KUTMOQDA!</h4>
               </div>
             </div>
           </div>
@@ -1620,27 +1550,32 @@
       <div class="modal-body">
         <div style="display: flex; flex-direction: column; gap: 16px;">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-            <div style="background: rgba(9, 13, 22, 0.6); padding: 12px; border-radius: 12px;">
-              <h4 style="color: #38bdf8;">🏫 Mo'ljallangan Sinf</h4>
-              <p style="font-size: 0.9rem;">6-"A" sinf Tabiiy fan dasturi bo'yicha.</p>
+            <div style="background: rgba(7, 11, 20, 0.6); padding: 12px; border-radius: 12px;">
+              <h4 style="color: #38bdf8;">🏫 Sinf</h4>
+              <p style="font-size: 0.9rem;">6-"A" sinf Tabiiy fan darsi.</p>
             </div>
-            <div style="background: rgba(9, 13, 22, 0.6); padding: 12px; border-radius: 12px;">
-              <h4 style="color: #34d399;">🔬 Fan va Mavzu</h4>
-              <p style="font-size: 0.9rem;">Oziq zanjiri va oziq to'ri ekotizimi.</p>
+            <div style="background: rgba(7, 11, 20, 0.6); padding: 12px; border-radius: 12px;">
+              <h4 style="color: #34d399;">🔬 Mavzu</h4>
+              <p style="font-size: 0.9rem;">Oziq zanjiri va oziq to'ri.</p>
             </div>
-            <div style="background: rgba(9, 13, 22, 0.6); padding: 12px; border-radius: 12px;">
-              <h4 style="color: #fbbf24;">👥 Format</h4>
-              <p style="font-size: 0.9rem;">2 ta Jamoa o'rtasida 20 ta zamonaviy card o'yini.</p>
+            <div style="background: rgba(7, 11, 20, 0.6); padding: 12px; border-radius: 12px;">
+              <h4 style="color: #fbbf24;">👥 Ishtirokchilar</h4>
+              <p style="font-size: 0.9rem;">2 ta Jamoa ("Burgutlar" va "Barslar").</p>
             </div>
           </div>
-          <div style="background: rgba(9, 13, 22, 0.7); padding: 16px; border-radius: 14px;">
-            <h4 style="color: #fbbf24; margin-bottom: 8px;">Qoidalar:</h4>
+          <div style="background: rgba(7, 11, 20, 0.7); padding: 16px; border-radius: 14px;">
+            <h4 style="color: #fbbf24; margin-bottom: 8px;">20 ta O'yin Turlari:</h4>
             <ol style="padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
-              <li>Mavzu tushuntirish uchun qat'iy 8 daqiqa beriladi. 8 daqiqa tugagach slaydlar qulflanadi ("Vaqt tugagan, ustoz!").</li>
-              <li>Asosiy sahifada 20 ta o'yin kartasi mavjud. 1-kartada "Omadli Baraban" (100, 500, 800 ball) joylashgan.</li>
-              <li>Jamoalar navbatma-navbat o'yin kartalarini tanlab o'ynaydi.</li>
-              <li>To'g'ri yechilgan o'yinlar uchun ballar tegishli jamoaga yoziladi va o'yin yechilgan deb belgilanadi.</li>
-              <li>20 ta o'yin yakunida eng ko'p ball to'plagan jamoa chempion bo'ladi!</li>
+              <li><strong>1-O'yin:</strong> Omadli Baraban (100, 500, 800 random ball va test)</li>
+              <li><strong>2-O'yin:</strong> Interaktiv Krossvord</li>
+              <li><strong>3-O'yin:</strong> Savol-Javoblar Viktorinasi</li>
+              <li><strong>4-O'yin:</strong> So'z Qidiruvi (Word Search Grid)</li>
+              <li><strong>5-O'yin:</strong> Oziq Zanjiri Konstruktori</li>
+              <li><strong>6-O'yin:</strong> 3 ta Savatga Saralash</li>
+              <li><strong>7-O'yin:</strong> Xotira O'yini (Memory Match)</li>
+              <li><strong>8-O'yin:</strong> 10% Qoidasi Energiya Tarozisi</li>
+              <li><strong>9-O'yin:</strong> Ortiqchasini Top (Odd One Out)</li>
+              <li><strong>10-20-O'yinlar:</strong> Oziq to'ri labirinti, Detektiv, Blits, Piramida va h.k.</li>
             </ol>
           </div>
         </div>
@@ -1693,7 +1628,6 @@
 
   <!-- Toast Notification -->
   <div class="toast-msg" id="toastMsg">
-    <span id="toastIcon">🔔</span>
     <span id="toastText">Xabarnoma</span>
   </div>
 
@@ -1702,14 +1636,13 @@
 
   <script>
     /* =======================================================================
-       1. SYNTHESIZED SOUND EFFECTS ENGINE (Web Audio API)
+       1. SYNTHESIZED SOUND EFFECTS ENGINE
        ======================================================================= */
     class SoundEngine {
       constructor() {
         this.ctx = null;
         this.enabled = true;
       }
-
       init() {
         if (!this.ctx) {
           const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -1717,7 +1650,6 @@
         }
         if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume();
       }
-
       playTone(freq, type, duration, startVol = 0.3, endVol = 0) {
         if (!this.enabled) return;
         this.init();
@@ -1733,7 +1665,6 @@
         osc.start();
         osc.stop(this.ctx.currentTime + duration);
       }
-
       playClick() { this.playTone(600, 'sine', 0.05, 0.15, 0.01); }
       playWheelTick() { this.playTone(440, 'triangle', 0.04, 0.12, 0.01); }
       playCorrect() {
@@ -1754,7 +1685,6 @@
         });
       }
     }
-
     const sound = new SoundEngine();
 
     /* =======================================================================
@@ -1820,315 +1750,284 @@
         }
       }
     }
-
     const confetti = new Confetti();
 
     /* =======================================================================
-       3. 20 TA ZAMONAVIY O'YINLAR MA'LUMOTLAR BAZASI
+       3. 20 TA XILMA-XIL O'YINLAR PORTALI (BARABAN, KROSSVORD, SAVOL-JAVOB, VA B.)
        ======================================================================= */
     const GAMES_PORTAL = [
-      // 1. Omadli Baraban (Wheel of Fortune - 100, 500, 800)
+      // 1. Omadli Baraban (Wheel of Fortune)
       {
         id: 1,
         tier: 500,
         icon: "🎡",
         tag: "Baraban",
         title: "Omadli Baraban",
-        subtitle: "100, 500 yoki 800 ballik random omad charxi va maxsus savoli",
+        subtitle: "100, 500 yoki 800 ballik random omad charxi va maxsus testi",
         type: "wheel_game",
-        desc: "Barabanni aylantiring! Charx to'xtagan ballga qarab random savol beriladi va jamoangizga ball yoziladi."
+        desc: "Barabanni aylantiring! 100, 500 yoki 800 ballga to'xtaydi va mos savol beriladi."
       },
-      // 2. Fotosintez
+      // 2. Interaktiv Krossvord
       {
         id: 2,
-        tier: 100,
-        icon: "🌿",
-        tag: "Produtsent",
-        title: "Fotosintez Laboratoriyasi",
-        subtitle: "Produtsent o'simlik fotosintez qilishi uchun nimalar kerak?",
-        type: "quiz",
-        options: [
-          { text: "Quyosh nuri, CO₂ va Suv", correct: true },
-          { text: "Faqat go'sht va yog'och", correct: false },
-          { text: "Faqat qorong'ulik va sovuq", correct: false },
-          { text: "Kislorod va temir", correct: false }
-        ],
-        explanation: "Yashil o'simliklar xlorofill yordamida quyosh nuri, karbonat angidrid va suvdan organik oziq (glyukoza) hosil qiladi."
+        tier: 500,
+        icon: "📝",
+        tag: "Krossvord",
+        title: "Biologik Krossvord",
+        subtitle: "Oziq zanjiri bo'yicha 4 ta asosiy atamani topib kataklarni to'ldiring",
+        type: "crossword_game",
+        desc: "1. QUYOSH, 2. BEDA, 3. ILON, 4. BAQA so'zlarini interaktiv oching!"
       },
-      // 3. Oziq zanjiri konstruktori
+      // 3. Savol-Javoblar Viktorinasi
       {
         id: 3,
         tier: 300,
+        icon: "❓",
+        tag: "Savol-Javob",
+        title: "Savol-Javoblar Turniri",
+        subtitle: "Kartochkali qiziqarli savol-javoblar bellashuvi",
+        type: "qa_flip_game",
+        desc: "Savolni ko'ring, javobni tekshiring va jamoangizga ball yozing."
+      },
+      // 4. So'z Qidiruvi (Word Search)
+      {
+        id: 4,
+        tier: 300,
+        icon: "🧩",
+        tag: "So'z Qidiruv",
+        title: "So'z Qidiruvi Labirinti",
+        subtitle: "Harflar jadvalidan 3 ta ekologik so'zni (O'SIMLIK, BO'RI, ILON) toping",
+        type: "word_search_game",
+        desc: "Jadvaldan yashiringan organizmlarni topib belgilang."
+      },
+      // 5. Oziq Zanjiri Konstruktori
+      {
+        id: 5,
+        tier: 300,
         icon: "🔗",
         tag: "Konstruktor",
-        title: "O'rmon Zanjiri Konstruktori",
-        subtitle: "O'rmon jonivorlarini quyoshdan boshlab oliy yirtqichgacha to'g'ri terib chiqing",
+        title: "Oziq Zanjiri Konstruktori",
+        subtitle: "Bo'g'inlarni tartib bilan bosib 4 ta a'zoli to'liq zanjir tuzing",
         type: "chain_order",
         correctSequence: ["Quyosh nuri", "Eman bargi", "Kiyik", "Bo'ri"],
         items: ["Bo'ri", "Eman bargi", "Kiyik", "Quyosh nuri"],
-        explanation: "To'g'ri tartib: Quyosh nuri → Eman bargi (produtsent) → Kiyik (o'txo'r) → Bo'ri (yirtqich)."
+        explanation: "Quyosh nuri → Eman bargi (produtsent) → Kiyik (o'txo'r) → Bo'ri (yirtqich)."
       },
-      // 4. O'txo'rlar va Yirtqichlar
-      {
-        id: 4,
-        tier: 200,
-        icon: "🦌",
-        tag: "Saralash",
-        title: "O'txo'rlar va Yirtqichlar",
-        subtitle: "1-tartib konsumentlarni aniqlang",
-        type: "quiz",
-        options: [
-          { text: "Quyon va Kiyik (O'txo'rlar)", correct: true },
-          { text: "Bo'ri va Tulki (Yirtqichlar)", correct: false },
-          { text: "Burgut va Lochin", correct: false },
-          { text: "Zamburug' va Bakteriya", correct: false }
-        ],
-        explanation: "1-tartib konsumentlar — bevosita o'simliklar bilan oziqlanuvchi fitofag (o'txo'r) hayvonlardir."
-      },
-      // 5. Redutsentlar Missiyasi
-      {
-        id: 5,
-        tier: 200,
-        icon: "🍄",
-        tag: "Parchalovchi",
-        title: "Redutsentlar Missiyasi",
-        subtitle: "Agar tabiatdagi barcha bakteriya va zamburug'lar yo'qolsa nima bo'ladi?",
-        type: "quiz",
-        options: [
-          { text: "O'lik qoldiqlar chirimay to'planib, minerallar tugaydi", correct: true },
-          { text: "O'simliklar tezroq o'sishni boshlaydi", correct: false },
-          { text: "Havo yanada tozalanadi", correct: false },
-          { text: "Hech narsa o'zgarmaydi", correct: false }
-        ],
-        explanation: "Redutsentlar o'lik organik qoldiqlarni parchalab, tuproqqa mineral tuzlar ko'rinishida qaytaruvchi tabiat sanitarilaridir."
-      },
-      // 6. 10% Qoidasi
+      // 6. Savatchalarga Saralash
       {
         id: 6,
-        tier: 500,
-        icon: "⚖️",
-        tag: "Lindeman",
-        title: "10% Qoidasi Hisob-Kitobi",
-        subtitle: "O'simlik 20 000 kJ energiya hosil qilsa, 2-tartib konsumentga qancha yetadi?",
-        type: "quiz",
-        options: [
-          { text: "200 kJ", correct: true },
-          { text: "2 000 kJ", correct: false },
-          { text: "20 kJ", correct: false },
-          { text: "10 000 kJ", correct: false }
-        ],
-        explanation: "20 000 kJ ning 10%i = 2 000 kJ (o'txo'rga). Uning ham 10%i = 200 kJ (2-tartib yirtqichga) yetib boradi!"
+        tier: 200,
+        icon: "🧺",
+        tag: "Saralash",
+        title: "Savatchalarga Saralash",
+        subtitle: "Organizmlarni 3 ta savatga (Produtsent, Konsument, Redutsent) ajrating",
+        type: "basket_sort_game",
+        desc: "Berilgan jonivor yoki o'simlikni to'g'ri ekologik savatga tashlang."
       },
-      // 7. Yaylov va Detrit
+      // 7. Xotira O'yini (Memory Match)
       {
         id: 7,
         tier: 200,
-        icon: "🌾",
-        tag: "Taqqoslash",
-        title: "Yaylov va Detrit Zanjiri",
-        subtitle: "Quyidagilardan qaysi biri Detrit (chirindi) zanjiri hisoblanadi?",
-        type: "quiz",
-        options: [
-          { text: "To'kilgan xazon → Chuvalchang → Qarg'a", correct: true },
-          { text: "Makkajo'xori → Sichqon → Mushuk", correct: false },
-          { text: "Gullar → Kapalak → Qush", correct: false },
-          { text: "Beda → Sigir → Inson", correct: false }
-        ],
-        explanation: "Detrit zanjiri har doim o'lik organik moddadan (to'kilgan xazon) boshlanadi."
+        icon: "🃏",
+        tag: "Xotira",
+        title: "Xotira Kartochkalari",
+        subtitle: "Yashiringan juftliklarni ochib mosini toping",
+        type: "memory_game",
+        desc: "O'simlik, O'txo'r, Yirtqich va Parchalovchi kartalarini juftlang."
       },
-      // 8. Katta Oziq To'ri
+      // 8. 10% Qoidasi Energiya Tarozisi
       {
         id: 8,
+        tier: 500,
+        icon: "⚖️",
+        tag: "Kalkulyator",
+        title: "10% Qoidasi - Energiya Tarozisi",
+        subtitle: "O'simlik 50 000 kJ energiya to'plasa, 2-tartib konsumentga qancha yetadi?",
+        type: "quiz",
+        options: [
+          { text: "500 kJ", correct: true },
+          { text: "5 000 kJ", correct: false },
+          { text: "50 kJ", correct: false },
+          { text: "25 000 kJ", correct: false }
+        ],
+        explanation: "50 000 kJ ning 10%i = 5 000 kJ (o'txo'rga). Uning 10%i esa = 500 kJ (2-tartib yirtqichga) yetib boradi!"
+      },
+      // 9. Ortiqchasini Top (Odd One Out)
+      {
+        id: 9,
+        tier: 200,
+        icon: "🔍",
+        tag: "Mantiq",
+        title: "Ortiqchasini Toping",
+        subtitle: "Quyidagilardan qaysi biri qolgan 3 tasiga to'g'ri kelmaydi?",
+        type: "quiz",
+        options: [
+          { text: "Quyon (Chunki u o'txo'r, qolganlari yirtqich)", correct: true },
+          { text: "Bo'ri", correct: false },
+          { text: "Tulki", correct: false },
+          { text: "Lochin", correct: false }
+        ],
+        explanation: "Bo'ri, tulki va lochin yirtqich (go'shtxo'r), quyon esa o'txo'r fitofagdir."
+      },
+      // 10. Katta Oziq To'ri
+      {
+        id: 10,
         tier: 300,
         icon: "🕸️",
         tag: "Oziq To'ri",
         title: "Katta Oziq To'ri Sirlari",
-        subtitle: "Nima uchun oziq to'ri qancha boy bo'lsa ekotizim shuncha mustahkam bo'ladi?",
+        subtitle: "Nima uchun oziq to'ri qancha boy bo'lsa tabiat shuncha barqaror bo'ladi?",
         type: "quiz",
         options: [
-          { text: "Chunki oziq turlari ko'p bo'lib, zaxira manbalar mavjud", correct: true },
-          { text: "Chunki barcha hayvonlar do'stlashib ketadi", correct: false },
-          { text: "Chunki yirtqichlar ov qilishni to'xtatadi", correct: false },
-          { text: "Bu ekotizimga ta'sir qilmaydi", correct: false }
+          { text: "Chunki zaxira oziq manbalari ko'p bo'ladi", correct: true },
+          { text: "Chunki o'simliklar o'smay qoladi", correct: false },
+          { text: "Chunki yirtqichlar o'lib ketadi", correct: false },
+          { text: "Buning aloqasi yo'q", correct: false }
         ],
-        explanation: "Turli xil zanjirlar bir-birini sug'urtalab turadi: bitta o'txo'r turi kamaysa, yirtqich boshqasiga o'tib oziqlana oladi."
+        explanation: "Bitta o'txo'r kamaysa, yirtqich boshqa oziqqa o'tadi va ekotizim qulashdan saqlanib qoladi."
       },
-      // 9. Bo'rilar Yo'qolsa...
-      {
-        id: 9,
-        tier: 500,
-        icon: "🐺",
-        tag: "Ekologik Inqiroz",
-        title: "Bo'rilar Yo'qolsa Nima Bo'ladi?",
-        subtitle: "Milliy bog'da barcha bo'rilar yo'q qilinganda nima uchun o'rmon qurigan?",
-        type: "quiz",
-        options: [
-          { text: "O'txo'rlar haddan tashqari ko'payib yosh nihollarni yeb bitirgan", correct: true },
-          { text: "Daraxtlar bo'rilarni sog'inib qurigan", correct: false },
-          { text: "Quyosh nuri tushmay qolgan", correct: false },
-          { text: "O'rmon yong'inlari sababli", correct: false }
-        ],
-        explanation: "Bu hodisa 'Trofik kaskad' deb ataladi: yirtqich yo'qolsa, o'txo'rlar soni cheksiz ko'payib o'rmon o'simliklarini yo'q qiladi."
-      },
-      // 10. Bioakkumulyatsiya
-      {
-        id: 10,
-        tier: 800,
-        icon: "🧪",
-        tag: "Super Mantiq",
-        title: "Bioakkumulyatsiya Detektivi",
-        subtitle: "Daryoga zahar to'kilsa, eng ko'p zahar qaysi organizm tanasida to'planadi?",
-        type: "quiz",
-        options: [
-          { text: "Zanjir cho'qqisidagi yirtqich qush yoki baliqda", correct: true },
-          { text: "Mayda suv o'tlarida", correct: false },
-          { text: "Suv tubidagi toshlarda", correct: false },
-          { text: "Suv burgalarida", correct: false }
-        ],
-        explanation: "Zaharli moddalar bo'g'indan bo'g'inga o'tgan sari to'planib boradi va oliy yirtqich tanasida maksimal darajaga yetadi."
-      },
-      // 11. Dengiz Zanjiri
+      // 11. Yaylov yoki Detrit?
       {
         id: 11,
+        tier: 200,
+        icon: "🌾",
+        tag: "Taqqoslash",
+        title: "Yaylov yoki Detrit Zanjiri?",
+        subtitle: "To'kilgan xazon → Yomg'ir chuvalchangi → Qarg'a. Bu qaysi zanjir?",
+        type: "quiz",
+        options: [
+          { text: "Detrit (Chirindi) zanjiri", correct: true },
+          { text: "Yaylov (O'tloq) zanjiri", correct: false }
+        ],
+        explanation: "O'lik organik chirindidan boshlanadigan barcha zanjirlar Detrit zanjiri deb ataladi."
+      },
+      // 12. Ekolog Detektiv (Bioakkumulyatsiya)
+      {
+        id: 12,
+        tier: 800,
+        icon: "🕵️‍♂️",
+        tag: "Super Mantiq",
+        title: "Ekolog Detektiv: Zahar Qayerda?",
+        subtitle: "Daryoga zahar to'kilsa, oziq zanjirida eng ko'p zahar kimda to'planadi?",
+        type: "quiz",
+        options: [
+          { text: "Zanjir cho'qqisidagi yirtqich baliqxo'r qushda", correct: true },
+          { text: "Mayda suvo'tlarda", correct: false },
+          { text: "Suv tubidagi toshda", correct: false },
+          { text: "Suv qisqichbaqasida", correct: false }
+        ],
+        explanation: "Bioakkumulyatsiya qoidasiga ko'ra zaharli moddalar yuqoriga harakatlanib oliy yirtqich tanasida eng ko'p to'planadi."
+      },
+      // 13. Topishmoq: "Kim Men?"
+      {
+        id: 13,
+        tier: 200,
+        icon: "🎭",
+        tag: "Topishmoq",
+        title: "Topishmoq: Men Kimman?",
+        subtitle: "'Men quyoshdan oziq olaman, xlorofill yordamida fotosintez qilaman. Men kimman?'",
+        type: "quiz",
+        options: [
+          { text: "Produtsent (Yashil o'simlik)", correct: true },
+          { text: "Yirtqich hayvon", correct: false },
+          { text: "Zamburug'", correct: false },
+          { text: "Chirindi bakteriyasi", correct: false }
+        ],
+        explanation: "Faqat fotosintez qiluvchi avtotrof o'simliklar birlamchi hosil qiluvchi (produtsent) bo'la oladi."
+      },
+      // 14. Ekotizim Muvozanat Simulyatori
+      {
+        id: 14,
+        tier: 500,
+        icon: "🌲",
+        tag: "Simulyator",
+        title: "O'rmon Muvozanati Ssenariysi",
+        subtitle: "O'rmondan barcha bo'rilar yo'q qilinsa, keyinchalik nima yuz beradi?",
+        type: "quiz",
+        options: [
+          { text: "Kiyiklar haddan tashqari ko'payib o'rmon nihollarini yeb quritadi", correct: true },
+          { text: "Daraxtlar o'z-o'zidan yanada ko'payadi", correct: false },
+          { text: "O'rmonga hech narsa bo'lmaydi", correct: false },
+          { text: "Daryolar toshib ketadi", correct: false }
+        ],
+        explanation: "Yirtqichlar o'txo'rlar sonini me'yorda ushlab turadi. Bo'rilar yo'qolsa kiyiklar o'rmonni quritadi."
+      },
+      // 15. Rost yoki Yolg'on?
+      {
+        id: 15,
+        tier: 100,
+        icon: "💡",
+        tag: "Rost / Yolg'on",
+        title: "Rost yoki Yolg'on?",
+        subtitle: "'Zamburug'lar xlorofillga ega va fotosintez qiladi' — bu fikr rostmi?",
+        type: "quiz",
+        options: [
+          { text: "Yolg'on (Zamburug'lar geterotrof redutsentdir)", correct: true },
+          { text: "Rost (Ular o'simlik kabi fotosintez qiladi)", correct: false }
+        ],
+        explanation: "Zamburug'larda xlorofill bo'lmaydi, ular tayyor organik chirindilar bilan oziqlanuvchi redutsentlardir."
+      },
+      // 16. Trofik Cho'qqi (Piramida Quruvchi)
+      {
+        id: 16,
+        tier: 500,
+        icon: "🧗‍♂️",
+        tag: "Piramida",
+        title: "Energiya Piramidasi Cho'qqisi",
+        subtitle: "Piramidaning eng tagida har doim qaysi guruh organizmlari turadi?",
+        type: "quiz",
+        options: [
+          { text: "Produtsentlar (Eng ko'p energiya va biomassa)", correct: true },
+          { text: "3-tartib yirtqichlar", correct: false },
+          { text: "Parazitlar", correct: false },
+          { text: "Bo'rilar", correct: false }
+        ],
+        explanation: "Piramidaning eng poydevor asosi fotosintez qiluvchi o'simliklar (produtsentlar)ga tegishli."
+      },
+      // 17. Dengiz Oziq Zanjiri
+      {
+        id: 17,
         tier: 300,
         icon: "🌊",
         tag: "Dengiz",
         title: "Okean Zanjiri Yig'uvchi",
-        subtitle: "Dengiz oziq zanjirini fitoplanktondan boshlab terib chiqing",
+        subtitle: "Okean oziq zanjirini fitoplanktondan boshlab terib chiqing",
         type: "chain_order",
         correctSequence: ["Fitoplankton", "Zooplankton", "Mayda baliq", "Akula"],
         items: ["Akula", "Fitoplankton", "Mayda baliq", "Zooplankton"],
-        explanation: "Suv havzalarida birlamchi hosil qiluvchi — fitoplankton, uni zooplankton, so'ng baliq va akula iste'mol qiladi."
+        explanation: "Fitoplankton → Zooplankton → Mayda baliq → Akula dengiz zanjirining to'g'ri ketma-ketligidir."
       },
-      // 12. Yetishmayotgan Halqa
-      {
-        id: 12,
-        tier: 200,
-        icon: "🧩",
-        tag: "Mantiq",
-        title: "Yetishmayotgan Halqa",
-        subtitle: "Bug'doy → [ ? ] → Ilon → Burgut. Oraliq bo'g'inni toping:",
-        type: "quiz",
-        options: [
-          { text: "Dala sichqoni", correct: true },
-          { text: "Sher", correct: false },
-          { text: "Kit", correct: false },
-          { text: "Kiyik", correct: false }
-        ],
-        explanation: "Bug'doy donini dala sichqoni yeydi, sichqonni esa ilon ovlaydi."
-      },
-      // 13. 60 Soniyalik Blits
-      {
-        id: 13,
-        tier: 500,
-        icon: "⚡",
-        tag: "Tezkor Blits",
-        title: "Tezkor Blits Sinov",
-        subtitle: "Yer yuzidagi barcha tiriklikning asosiy energiya manbai nima?",
-        type: "quiz",
-        options: [
-          { text: "Quyosh", correct: true },
-          { text: "Oy", correct: false },
-          { text: "Vulqonlar", correct: false },
-          { text: "Yulduzlar", correct: false }
-        ],
-        explanation: "Quyosh nuri barcha oziq zanjirlarining quvvat manbaidir."
-      },
-      // 14. Hammaxo'rlar Laboratoriyasi
-      {
-        id: 14,
-        tier: 300,
-        icon: "🐻",
-        tag: "Hammaxo'r",
-        title: "Hammaxo'rlar Laboratoriyasi",
-        subtitle: "Quyidagilardan qaysi biri hammaxo'r (omnivor) organizm?",
-        type: "quiz",
-        options: [
-          { text: "Qo'ng'ir ayiq va Qarg'a", correct: true },
-          { text: "Faqat bo'ri", correct: false },
-          { text: "Faqat sigir", correct: false },
-          { text: "Faqat quyon", correct: false }
-        ],
-        explanation: "Qo'ng'ir ayiq ham o'simlik mevalari, ham baliq va go'sht bilan oziqlanadi."
-      },
-      // 15. Cho'l Ekotizimi
-      {
-        id: 15,
-        tier: 500,
-        icon: "🏜️",
-        tag: "Cho'l",
-        title: "Cho'l Ekotizimi Konstruktori",
-        subtitle: "Saksovuldan burgutgacha zanjirni to'g'ri tartibda tering",
-        type: "chain_order",
-        correctSequence: ["Saksovul", "Qum sichqoni", "Bo'g'ma ilon", "Cho'l burguti"],
-        items: ["Cho'l burguti", "Saksovul", "Bo'g'ma ilon", "Qum sichqoni"],
-        explanation: "Saksovul (produtsent) → Qum sichqoni (o'txo'r) → Bo'g'ma ilon (yirtqich) → Cho'l burguti (oliy yirtqich)."
-      },
-      // 16. Haqiqatmi yoki Afsona?
-      {
-        id: 16,
-        tier: 100,
-        icon: "💡",
-        tag: "Fakt-Chek",
-        title: "Haqiqatmi yoki Afsona?",
-        subtitle: "Oziq zanjirlari doimo yirtqich hayvondan boshlanishi rostmi?",
-        type: "quiz",
-        options: [
-          { text: "Noto'g'ri (Yaylov zanjiri o'simlikdan boshlanadi)", correct: true },
-          { text: "To'g'ri (Har doim yirtqichdan boshlanadi)", correct: false }
-        ],
-        explanation: "Barcha yaylov oziq zanjirlari fotosintez qiluvchi yashil o'simliklardan boshlanadi."
-      },
-      // 17. Tabiat Sanitarilari
-      {
-        id: 17,
-        tier: 300,
-        icon: "🔍",
-        tag: "Sanitariya",
-        title: "Tabiat Sanitarilari",
-        subtitle: "Chirindi bilan oziqlanuvchi va tuproqni yumshatuvchi hayvon:",
-        type: "quiz",
-        options: [
-          { text: "Yomg'ir chuvalchangi", correct: true },
-          { text: "Tulki", correct: false },
-          { text: "Lochin", correct: false },
-          { text: "Kiyik", correct: false }
-        ],
-        explanation: "Yomg'ir chuvalchangi o'lik xazon qoldiqlarini yeb, gumus (tuproq chirindisi) hosil qiladi."
-      },
-      // 18. Energiya Yo'qolishi
+      // 18. Chalkash Harflar (Anagraf)
       {
         id: 18,
-        tier: 500,
-        icon: "☀️",
-        tag: "Termodinamika",
-        title: "90% Energiya Qayerga Ketadi?",
-        subtitle: "Nima uchun har bir pog'onada energiyaning 90%i yo'qoladi?",
+        tier: 300,
+        icon: "🔠",
+        tag: "Anagraf",
+        title: "Chalkash Harflar",
+        subtitle: "'F-O-T-O-S-I-N-T-E-Z' harflaridan hosil bo'ladigan biologik jarayon nima?",
         type: "quiz",
         options: [
-          { text: "Nafas olish, harakat va issiqlik sifatida tarqaladi", correct: true },
-          { text: "Yer ostiga ko'milib ketadi", correct: false },
-          { text: "Quyoshga qaytib uchadi", correct: false },
-          { text: "Hech qayerga yo'qolmaydi", correct: false }
+          { text: "Fotosintez", correct: true },
+          { text: "Fermantatsiya", correct: false },
+          { text: "Filtratsiya", correct: false },
+          { text: "Fagotsitoz", correct: false }
         ],
-        explanation: "Organizm iste'mol qilgan energiyaning asosiy qismi yashash, harakat va tana harorati uchun sarflanadi."
+        explanation: "Fotosintez — yashil o'simliklarning yorug'likda organik modda sintezlash jarayoni."
       },
-      // 19. Piramida Quruvchisi
+      // 19. 60 Soniyalik Blits
       {
         id: 19,
         tier: 500,
-        icon: "🏰",
-        tag: "Piramida",
-        title: "Energiya Piramidasi Qasri",
-        subtitle: "Piramidaning eng tagida, ya'ni asosida kimlar turadi?",
+        icon: "⚡",
+        tag: "Tezkor Blits",
+        title: "60 Soniyalik Blits-Duel",
+        subtitle: "Oziq zanjirlarida moddalar doiraviy aylanadimi?",
         type: "quiz",
         options: [
-          { text: "Produtsentlar (Yashil o'simliklar)", correct: true },
-          { text: "Yirtqichlar (Arslonlar)", correct: false },
-          { text: "Parazitlar", correct: false },
-          { text: "Faqat qushlar", correct: false }
+          { text: "Ha, moddalar doiraviy aylanadi, energiya esa oqib tarqaladi", correct: true },
+          { text: "Yo'q, hech narsa aylanmaydi", correct: false }
         ],
-        explanation: "Piramidaning eng keng asosi har doim eng ko'p biomassa va energiyaga ega bo'lgan produtsentlarga tegishlidir."
+        explanation: "Moddalar biosferada doiraviy aylanadi, energiya esa faqat bir yo'nalishda Quyoshdan koinotga qarab oqadi."
       },
       // 20. Katta Final Super-Jangi
       {
@@ -2137,15 +2036,15 @@
         icon: "👑",
         tag: "Super Final",
         title: "6-'A' Chempionlik Super-Jangi",
-        subtitle: "Ekotizimda moddalar va energiya qanday harakatlanadi?",
+        subtitle: "Ekotizimda 3 ta asosiy bo'g'in to'g'ri ko'rsatilgan qatorni toping:",
         type: "quiz",
         options: [
-          { text: "Moddalar doiraviy aylanadi, energiya esa bir tomonlama oqadi", correct: true },
-          { text: "Energiya ham, moddalar ham aylanmaydi", correct: false },
-          { text: "Faqat energiya aylanadi, modda o'zgarmaydi", correct: false },
-          { text: "Hech qanday qonuniyat yo'q", correct: false }
+          { text: "Produtsentlar → Konsumentlar → Redutsentlar", correct: true },
+          { text: "Yirtqichlar → Bo'rilar → O'simliklar", correct: false },
+          { text: "Zamburug'lar → Suv → Quyosh", correct: false },
+          { text: "Faqat Konsumentlar", correct: false }
         ],
-        explanation: "Ajoyib xulosa! Moddalar doiraviy aylanib qayta ishlanadi, energiya esa Quyoshdan kelib oziq zanjirlari orqali koinotga tarqaladi!"
+        explanation: "Tabiatdagi barcha oziq zanjirlari Produtsentlar (hosil qiluvchilar), Konsumentlar (iste'molchilar) va Redutsentlar (parchalovchilar) o'rtasida muvozanatda bo'ladi!"
       }
     ];
 
@@ -2238,7 +2137,7 @@
     };
 
     /* =======================================================================
-       6. INTERAKTIV O'YIN MODALI VA 1-KARTA: BARABAN
+       6. INTERAKTIV O'YIN MODALLARI VA BARCHA MINI-O'YINLAR
        ======================================================================= */
     function openGameModal(gameId) {
       const game = GAMES_PORTAL.find(g => g.id === gameId);
@@ -2252,38 +2151,262 @@
       const curTeamName = state.currentTurn === 1 ? state.team1.name : state.team2.name;
       const curTeamColor = state.currentTurn === 1 ? '#3b82f6' : '#f97316';
 
-      // CARD 1: OMADLI BARABAN
+      // 1. O'YIN: OMADLI BARABAN (WHEEL OF FORTUNE)
       if (game.type === 'wheel_game') {
         container.innerHTML = `
-          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(9, 13, 22, 0.6); padding: 8px 16px; border-radius: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
             <span>Sektorlar: <strong>100, 500, 800 Ball</strong></span>
             <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
           </div>
 
-          <div class="wheel-modal-stage">
-            <div class="wheel-canvas-wrapper">
-              <svg class="wheel-pointer" viewBox="0 0 40 50">
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 10px;">
+            <div style="position: relative; width: 340px; height: 340px;">
+              <svg style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 36px; height: 48px; z-index: 10;" viewBox="0 0 40 50">
                 <polygon points="20,50 5,5 35,5" fill="#f43f5e" stroke="#fff" stroke-width="3" />
                 <circle cx="20" cy="12" r="6" fill="#fef08a" />
               </svg>
-              <canvas id="wheelCanvas" width="450" height="450"></canvas>
-              <div class="wheel-center-cap" id="wheelCenterCap" onclick="spinWheelInsideCard()">🎯</div>
+              <canvas id="wheelCanvas" width="450" height="450" style="width: 100%; height: 100%; border-radius: 50%; filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6));"></canvas>
+              <div onclick="spinWheelInsideCard()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle, #fbbf24 30%, #b45309 100%); border: 4px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; z-index: 5;">🎯</div>
             </div>
 
-            <button class="btn-spin-wheel-card" id="btnSpinWheelCard" onclick="spinWheelInsideCard()">
+            <button onclick="spinWheelInsideCard()" id="btnSpinWheelCard" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #070b14; font-family: 'Fredoka', cursive; font-size: 1.3rem; font-weight: 700; padding: 12px 36px; border-radius: 18px; border: 3px solid #fef08a; cursor: pointer; box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);">
               <span>🎲</span> BARABANNI AYLANTIRISH
             </button>
             <div id="wheelQuestionContainer" style="width: 100%;"></div>
           </div>
         `;
         openModal('modalGamePlay');
-        setTimeout(() => drawWheelOnCanvas(), 100);
+        setTimeout(() => drawWheelOnCanvas(), 80);
         return;
       }
 
-      // STANDARD INTERACTIVE GAMES (Cards 2-20)
+      // 2. O'YIN: INTERAKTIV KROSSVORD
+      if (game.type === 'crossword_game') {
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
+            <span>Topshiriq: <strong>Krossvord Kataklarini Ochish</strong></span>
+            <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
+          </div>
+
+          <div style="text-align: center; margin-top: 10px; font-size: 1rem; color: #cbd5e1;">
+            Savollarga javob bering va katakchalarni bosing:
+          </div>
+
+          <!-- Crossword visual rows -->
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; margin: 15px 0;">
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="font-weight: 800; color: #38bdf8; width: 140px; text-align: right; font-size: 0.9rem;">1. Energiya manbai:</span>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+              <div class="crossword-cell cw-word1" onclick="revealCrosswordWord(1, 'QUYOSH')">?</div>
+            </div>
+
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="font-weight: 800; color: #34d399; width: 140px; text-align: right; font-size: 0.9rem;">2. Birlamchi o't:</span>
+              <div class="crossword-cell cw-word2" onclick="revealCrosswordWord(2, 'BEDA')">?</div>
+              <div class="crossword-cell cw-word2" onclick="revealCrosswordWord(2, 'BEDA')">?</div>
+              <div class="crossword-cell cw-word2" onclick="revealCrosswordWord(2, 'BEDA')">?</div>
+              <div class="crossword-cell cw-word2" onclick="revealCrosswordWord(2, 'BEDA')">?</div>
+            </div>
+
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="font-weight: 800; color: #fbbf24; width: 140px; text-align: right; font-size: 0.9rem;">3. Yirtqich sudraluvchi:</span>
+              <div class="crossword-cell cw-word3" onclick="revealCrosswordWord(3, 'ILON')">?</div>
+              <div class="crossword-cell cw-word3" onclick="revealCrosswordWord(3, 'ILON')">?</div>
+              <div class="crossword-cell cw-word3" onclick="revealCrosswordWord(3, 'ILON')">?</div>
+              <div class="crossword-cell cw-word3" onclick="revealCrosswordWord(3, 'ILON')">?</div>
+            </div>
+
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="font-weight: 800; color: #f43f5e; width: 140px; text-align: right; font-size: 0.9rem;">4. Suv va quruqlikda:</span>
+              <div class="crossword-cell cw-word4" onclick="revealCrosswordWord(4, 'BAQA')">?</div>
+              <div class="crossword-cell cw-word4" onclick="revealCrosswordWord(4, 'BAQA')">?</div>
+              <div class="crossword-cell cw-word4" onclick="revealCrosswordWord(4, 'BAQA')">?</div>
+              <div class="crossword-cell cw-word4" onclick="revealCrosswordWord(4, 'BAQA')">?</div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 10px; margin: 10px 0;">
+            <button onclick="revealAllCrossword()" style="background: #10b981; color: white; border: none; padding: 8px 18px; border-radius: 10px; font-weight: 700; cursor: pointer;">
+              ✨ Krossvordni To'liq Ochish
+            </button>
+          </div>
+
+          <div class="award-team-actions" style="margin-top: 14px;">
+            <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish (${game.tier} Ball):</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+            </div>
+          </div>
+        `;
+        openModal('modalGamePlay');
+        return;
+      }
+
+      // 3. O'YIN: SAVOL-JAVOBLAR VIKTORINASI
+      if (game.type === 'qa_flip_game') {
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
+            <span>Format: <strong>Savol-Javob Kartasi</strong></span>
+            <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
+          </div>
+
+          <div style="background: rgba(7, 11, 20, 0.7); border: 2px solid #38bdf8; border-radius: 18px; padding: 20px; text-align: center; margin: 15px 0;">
+            <h3 style="font-family: 'Fredoka', cursive; font-size: 1.4rem; color: #fbbf24; margin-bottom: 10px;">❓ Viktorina Savoli:</h3>
+            <p style="font-size: 1.15rem; color: #f8fafc; line-height: 1.5; margin-bottom: 16px;">
+              "Oziq zanjirida nima sababdan yirtqich hayvonlar (bo'ri, burgut) o'txo'r hayvonlarga (quyon, kiyik) qaraganda son jihatdan doimo kam bo'ladi?"
+            </p>
+
+            <button id="btnRevealQA" onclick="document.getElementById('qaAnswerBox').style.display = 'block'; sound.playCorrect(); confetti.launch(40);" style="background: #3b82f6; color: white; border: none; padding: 10px 24px; border-radius: 12px; font-weight: 700; cursor: pointer;">
+              💡 To'g'ri Javobni Ko'rish
+            </button>
+
+            <div id="qaAnswerBox" style="display: none; margin-top: 16px; padding: 14px; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 14px; color: #a7f3d0; text-align: left; font-size: 1rem; line-height: 1.5;">
+              <strong>✅ Ilmiy Javob:</strong> 10% qoidasiga ko'ra energiyaning 90%i yo'qoladi. Zanjirning yuqori pog'onalariga juda kam energiya yetib borgani sababli, tabiat faqat oz sonli yirtqichlarni boqa oladi!
+            </div>
+          </div>
+
+          <div class="award-team-actions">
+            <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish (${game.tier} Ball):</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+            </div>
+          </div>
+        `;
+        openModal('modalGamePlay');
+        return;
+      }
+
+      // 4. O'YIN: SO'Z QIDIRUVI (WORD SEARCH GRID)
+      if (game.type === 'word_search_game') {
+        const letters = [
+          'O','S','I','M','L','I','K','A',
+          'B','O','R','I','K','L','M','B',
+          'A','B','C','I','L','O','N','C',
+          'Q','U','Y','O','S','H','D','E',
+          'A','Z','A','N','J','I','R','F',
+          'B','U','R','G','U','T','G','H',
+          'K','I','Y','I','K','M','N','P',
+          'F','O','T','O','S','I','N','T'
+        ];
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
+            <span>Toping: <strong>O'SIMLIK, BO'RI, ILON</strong></span>
+            <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
+          </div>
+
+          <div class="word-search-grid" id="wordSearchGrid">
+            ${letters.map((char, idx) => `
+              <div class="ws-cell" onclick="handleWordSearchClick(this, '${char}')">${char}</div>
+            `).join('')}
+          </div>
+
+          <div style="text-align: center; color: #34d399; font-weight: 700;" id="wsStatusText">
+            Harflarni bosing va so'zlarni toping!
+          </div>
+
+          <div class="award-team-actions">
+            <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish (${game.tier} Ball):</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+            </div>
+          </div>
+        `;
+        openModal('modalGamePlay');
+        return;
+      }
+
+      // 6. O'YIN: SAVATCHALARGA SARALASH
+      if (game.type === 'basket_sort_game') {
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
+            <span>Topshiriq: <strong>3 Ta Savatga Saralash</strong></span>
+            <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
+          </div>
+
+          <div style="text-align: center; margin: 15px 0;">
+            <div id="currentSortItem" style="font-size: 2rem; font-family: 'Fredoka', cursive; color: #fbbf24; background: rgba(7, 11, 20, 0.7); padding: 12px; border-radius: 14px; display: inline-block;">
+              🌲 Eman Daraxti
+            </div>
+            <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 6px;">Qaysi savatga tegishli? Savatni bosing:</p>
+          </div>
+
+          <div class="baskets-container">
+            <div class="basket-box" onclick="handleBasketSort('produtsent')">
+              <span style="font-size: 2.2rem;">🌱</span>
+              <strong style="color: #34d399; margin-top: 6px;">PRODUTSENTLAR</strong>
+              <span style="font-size: 0.75rem; color: #94a3b8;">Hosil qiluvchilar</span>
+            </div>
+            <div class="basket-box" onclick="handleBasketSort('konsument')">
+              <span style="font-size: 2.2rem;">🐇</span>
+              <strong style="color: #38bdf8; margin-top: 6px;">KONSUMENTLAR</strong>
+              <span style="font-size: 0.75rem; color: #94a3b8;">Iste'molchilar</span>
+            </div>
+            <div class="basket-box" onclick="handleBasketSort('redutsent')">
+              <span style="font-size: 2.2rem;">🍄</span>
+              <strong style="color: #fbbf24; margin-top: 6px;">REDUTSENTLAR</strong>
+              <span style="font-size: 0.75rem; color: #94a3b8;">Parchalovchilar</span>
+            </div>
+          </div>
+
+          <div id="basketFeedbackText" style="text-align: center; font-weight: 700; min-height: 24px; color: #34d399;"></div>
+
+          <div class="award-team-actions">
+            <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish (${game.tier} Ball):</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+            </div>
+          </div>
+        `;
+        openModal('modalGamePlay');
+        return;
+      }
+
+      // 7. O'YIN: XOTIRA O'YINI (MEMORY MATCH)
+      if (game.type === 'memory_game') {
+        const memoryCards = [
+          { id: 1, val: "☀️", match: 1 }, { id: 2, val: "Quyosh", match: 1 },
+          { id: 3, val: "🌱", match: 2 }, { id: 4, val: "Produtsent", match: 2 },
+          { id: 5, val: "🐺", match: 3 }, { id: 6, val: "Yirtqich", match: 3 },
+          { id: 7, val: "🍄", match: 4 }, { id: 8, val: "Redutsent", match: 4 }
+        ].sort(() => Math.random() - 0.5);
+
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
+            <span>Topshiriq: <strong>Juft Kartalarni Ochish</strong></span>
+            <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
+          </div>
+
+          <div class="memory-grid" id="memoryGrid">
+            ${memoryCards.map((c, i) => `
+              <div class="memory-card" data-match="${c.match}" data-val="${c.val}" onclick="handleMemoryClick(this)">
+                ❓
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="award-team-actions">
+            <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish (${game.tier} Ball):</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+            </div>
+          </div>
+        `;
+        openModal('modalGamePlay');
+        return;
+      }
+
+      // STANDARD QUIZ & CHAIN ORDER GAMES (Games 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
       let html = `
-        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(9, 13, 22, 0.6); padding: 8px 16px; border-radius: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(7, 11, 20, 0.6); padding: 8px 16px; border-radius: 12px;">
           <span>Qiyinchilik: <strong>${game.tier} Ball</strong></span>
           <span>Navbat: <strong style="color: ${curTeamColor};">${curTeamName}</strong></span>
         </div>
@@ -2340,15 +2463,9 @@
           <div class="award-team-actions">
             <span style="font-size: 0.9rem; font-weight: 700;">Ballni kimga yozish:</span>
             <div style="display: flex; gap: 8px;">
-              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">
-                +${game.tier} (${state.team1.name})
-              </button>
-              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">
-                +${game.tier} (${state.team2.name})
-              </button>
-              <button class="btn-award none" onclick="skipAward()">
-                0 (Hech kimga)
-              </button>
+              <button class="btn-award team-1" onclick="awardPoints(1, ${game.tier})">+${game.tier} (${state.team1.name})</button>
+              <button class="btn-award team-2" onclick="awardPoints(2, ${game.tier})">+${game.tier} (${state.team2.name})</button>
+              <button class="btn-award none" onclick="skipAward()">0 (O'tkazish)</button>
             </div>
           </div>
         </div>
@@ -2357,6 +2474,90 @@
       container.innerHTML = html;
       openModal('modalGamePlay');
     }
+
+    /* Crossword Handlers */
+    window.revealCrosswordWord = function(wordNum, wordText) {
+      sound.playCorrect();
+      const cells = document.querySelectorAll(`.cw-word${wordNum}`);
+      cells.forEach((c, idx) => {
+        c.textContent = wordText[idx];
+        c.classList.add('revealed');
+      });
+      confetti.launch(40);
+    };
+
+    window.revealAllCrossword = function() {
+      revealCrosswordWord(1, 'QUYOSH');
+      revealCrosswordWord(2, 'BEDA');
+      revealCrosswordWord(3, 'ILON');
+      revealCrosswordWord(4, 'BAQA');
+    };
+
+    /* Word Search Handlers */
+    window.handleWordSearchClick = function(cell, char) {
+      sound.playClick();
+      cell.classList.toggle('selected');
+    };
+
+    /* Basket Sort Handlers */
+    const sortSequence = [
+      { name: "🌲 Eman Daraxti", type: "produtsent" },
+      { name: "🐺 Yirtqich Bo'ri", type: "konsument" },
+      { name: "🍄 Qalpoqchali Zamburug'", type: "redutsent" },
+      { name: "🌾 Dala Bedasi", type: "produtsent" },
+      { name: "🦌 Cho'l Kiyigi", type: "konsument" }
+    ];
+    let currentSortIdx = 0;
+
+    window.handleBasketSort = function(basketType) {
+      const currentItem = sortSequence[currentSortIdx % sortSequence.length];
+      const fb = document.getElementById('basketFeedbackText');
+      if (basketType === currentItem.type) {
+        sound.playCorrect();
+        fb.innerHTML = `✅ To'g'ri! ${currentItem.name} to'g'ri savatga tushdi!`;
+        currentSortIdx++;
+        const nextItem = sortSequence[currentSortIdx % sortSequence.length];
+        document.getElementById('currentSortItem').textContent = nextItem.name;
+        confetti.launch(30);
+      } else {
+        sound.playWrong();
+        fb.innerHTML = `❌ Noto'g'ri savat! Qaytadan urinib ko'ring.`;
+      }
+    };
+
+    /* Memory Match Handlers */
+    let firstCard = null;
+    let lockBoard = false;
+    window.handleMemoryClick = function(card) {
+      if (lockBoard || card === firstCard || card.classList.contains('matched')) return;
+      sound.playClick();
+      card.textContent = card.dataset.val;
+      card.classList.add('flipped');
+
+      if (!firstCard) {
+        firstCard = card;
+        return;
+      }
+
+      if (firstCard.dataset.match === card.dataset.match) {
+        sound.playCorrect();
+        firstCard.classList.add('matched');
+        card.classList.add('matched');
+        firstCard = null;
+        confetti.launch(30);
+      } else {
+        sound.playWrong();
+        lockBoard = true;
+        setTimeout(() => {
+          firstCard.textContent = "❓";
+          card.textContent = "❓";
+          firstCard.classList.remove('flipped');
+          card.classList.remove('flipped');
+          firstCard = null;
+          lockBoard = false;
+        }, 800);
+      }
+    };
 
     /* =======================================================================
        7. BARABAN CHIZISH VA AYLANTIRISH MEXANIKASI (CARD 1)
@@ -2458,7 +2659,7 @@
 
       const qBox = document.getElementById('wheelQuestionContainer');
       qBox.innerHTML = `
-        <div style="background: rgba(9, 13, 22, 0.85); border: 2px solid ${sector.color}; padding: 16px; border-radius: 18px; margin-top: 14px;">
+        <div style="background: rgba(7, 11, 20, 0.85); border: 2px solid ${sector.color}; padding: 16px; border-radius: 18px; margin-top: 14px;">
           <h3 style="font-family: 'Fredoka', cursive; color: ${sector.color}; font-size: 1.4rem; text-align: center; margin-bottom: 8px;">
             🎉 Baraban ${sector.points} Ballga To'xtadi!
           </h3>
@@ -2506,9 +2707,7 @@
       }
     };
 
-    /* =======================================================================
-       8. JAVOB VA BALL BERISH
-       ======================================================================= */
+    /* Standard Quiz Answer */
     window.handleQuizAnswer = function(button, isCorrect) {
       const allBtns = document.querySelectorAll('.option-btn');
       allBtns.forEach(b => {
@@ -2533,6 +2732,7 @@
       }
     };
 
+    /* Chain Order Token Click */
     window.handleChainTokenClick = function(button, tokenText) {
       if (button.classList.contains('used')) return;
       const game = state.activeGame;
@@ -2580,6 +2780,7 @@
       if (fbBox) fbBox.className = 'answer-feedback-box';
     };
 
+    /* Award Points */
     window.awardPoints = function(teamNum, points) {
       if (teamNum === 1) {
         state.team1.score += points;
@@ -2633,7 +2834,7 @@
     }
 
     /* =======================================================================
-       9. 8-DAQIQA USTOZ TAYMERI & SLAYDLAR
+       8. 8-DAQIQA USTOZ TAYMERI & SLAYDLAR
        ======================================================================= */
     function formatTime(sec) {
       const m = Math.floor(sec / 60).toString().padStart(2, '0');
@@ -2745,9 +2946,7 @@
       renderSlideDots();
     }
 
-    /* =======================================================================
-       10. MODAL BOSHQARUV VA YAKUNIY G'OLIB
-       ======================================================================= */
+    /* Modals & Winner */
     function openModal(modalId) {
       sound.playClick();
       const modal = document.getElementById(modalId);
@@ -2793,18 +2992,14 @@
       openModal('modalWinner');
     }
 
-    /* =======================================================================
-       11. DASTURNI BOSHLASH VA HODISALAR
-       ======================================================================= */
+    /* Start App */
     document.addEventListener('DOMContentLoaded', () => {
-      // Audio toggle
       document.getElementById('btnToggleAudio').onclick = () => {
         sound.enabled = !sound.enabled;
         document.getElementById('btnToggleAudio').textContent = sound.enabled ? '🔊' : '🔇';
         showToast(sound.enabled ? "Ovoz yoqildi" : "Ovoz o'chirildi");
       };
 
-      // Top Actions
       document.getElementById('btnOpenSlides').onclick = () => {
         if (state.slidesLocked) {
           sound.playWrong();
@@ -2827,7 +3022,7 @@
 
       document.getElementById('btnStartGameFromLock').onclick = () => closeModal('modalSlides');
 
-      // Secret teacher unlock: double click lock icon to reset 8 min
+      // Secret teacher override
       document.getElementById('lockIconClickable').ondblclick = () => {
         if (confirm("Ustoz, taymerni qayta 8 daqiqaga o'rnatmoqchimisiz?")) {
           resetTimer();
@@ -2835,7 +3030,6 @@
         }
       };
 
-      // Timer Controls
       document.getElementById('btnTimerToggle').onclick = () => {
         if (state.timerRunning) pauseTimer();
         else startTimer();
@@ -2845,7 +3039,6 @@
         if (confirm("Taymerni qayta 8 daqiqaga o'rnatishni tasdiqlaysizmi?")) resetTimer();
       };
 
-      // Team Names Edit
       document.getElementById('team1Name').addEventListener('change', (e) => {
         state.team1.name = e.target.value || "1-Jamoa";
         updateScoreboardUI();
@@ -2855,7 +3048,6 @@
         updateScoreboardUI();
       });
 
-      // Restart entire tournament
       document.getElementById('btnRestartAll').onclick = () => {
         if (confirm("Barcha ballarni yangilab, yangi o'yin boshlaysizmi?")) {
           state.team1.score = 0;
@@ -2872,7 +3064,6 @@
         }
       };
 
-      // Init UI
       updateTimerUI();
       updateScoreboardUI();
       renderGameCards();
@@ -2880,7 +3071,7 @@
       goToSlide(1);
 
       setTimeout(() => {
-        showToast("Xush kelibsiz! 20 ta zamonaviy o'yin kartalari tayyor!");
+        showToast("Xush kelibsiz! 20 ta turli xil o'yinlar tayyor!");
       }, 500);
     });
   </script>
